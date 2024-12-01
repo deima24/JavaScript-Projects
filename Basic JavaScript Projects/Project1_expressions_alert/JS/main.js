@@ -1,3 +1,3 @@
-var A = "String assignment";
+var A = "Now i do \"Escape character\" " + "now this is second part " + "adding the plus sign\'s\ ";
 
-window.alert(A);
+document.write(A);
