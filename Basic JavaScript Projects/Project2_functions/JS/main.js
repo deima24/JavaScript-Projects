@@ -1,7 +1,6 @@
-function First_One() {
-    var first_str = "My name is ";
-    var second_str = "Deima.";
+function First_One() {                  // Creating function
+    var first_str = "My name is ";      // creating string
+    first_str += "Deima"                // adding more text to the str using +=
 
-    document.getElementById("first_function").innerHTML = first_str;
-    document.getElementById("second_function").innerHTML = second_str;
+    document.getElementById("first_function").innerHTML = first_str;        //vcalling function
 }
