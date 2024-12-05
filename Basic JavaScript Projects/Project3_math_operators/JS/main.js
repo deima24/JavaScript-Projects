@@ -34,6 +34,6 @@ document.getElementById("divi").innerHTML = "50 / 5 = " + divi_math;
 
 // Multiple Operations
 function Multiple_Operation() {
-    var multiple_Math = (2 + 5) * 5 / 7 - 5;
-    document.getElementById("multiple").innerHTML = "2 plus 5, multiply by 5, divided by 7 and subtracted by 5 equals " + multiple_Math;
+    var multiple_Math = (2 + 5) * 5 / 7 - 3;
+    document.getElementById("multiple").innerHTML = "2 plus 5, multiply by 5, divided by 7 and subtracted by 3 = " + multiple_Math;
 }
