@@ -43,3 +43,10 @@ function Moduls_Operator() {
     var modul_Operator = 25 % 6;
     document.getElementById("modul").innerHTML = "25 devided by 6 you get remainder: " + modul_Operator;
 }
+
+
+// negation operator
+function Negation_Operator()  {
+    var Negation_Operators = 6;
+    document.getElementById("negation").innerHTML = -Negation_Operators;
+}
