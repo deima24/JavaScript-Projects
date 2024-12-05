@@ -37,3 +37,9 @@ function Multiple_Operation() {
     var multiple_Math = (2 + 5) * 5 / 7 - 3;
     document.getElementById("multiple").innerHTML = "2 plus 5, multiply by 5, divided by 7 and subtracted by 3 = " + multiple_Math;
 }
+
+// moduls operator
+function Moduls_Operator() {
+    var modul_Operator = 25 % 6;
+    document.getElementById("modul").innerHTML = "25 devided by 6 you get remainder: " + modul_Operator;
+}
