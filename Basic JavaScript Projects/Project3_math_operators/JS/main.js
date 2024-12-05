@@ -50,3 +50,15 @@ function Negation_Operator()  {
     var Negation_Operators = 6;
     document.getElementById("negation").innerHTML = -Negation_Operators;
 }
+
+
+//increment number
+var i = 6;
+i++;
+document.write(i + "<br>");
+
+//decrement number'
+var e = 6;
+e--;
+document.write(e);
+
