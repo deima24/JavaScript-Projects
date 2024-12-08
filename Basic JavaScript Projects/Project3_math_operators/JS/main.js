@@ -52,13 +52,24 @@ function Negation_Operator()  {
 }
 
 
-//increment number
-var i = 6;
-i++;
-document.write(i + "<br>");
-
-//decrement number'
 var e = 6;
-e--;
-document.write(e);
 
+//increment number
+function incrementNumber() {
+    e++;
+    document.getElementById("counter").innerHTML = e;
+}
+
+
+//decrement number
+function decrementNumber() {
+    e--;
+    document.getElementById("counter").innerHTML = e;
+}
+
+// random number
+function random_Number(min, max) {
+    var randomNum = Math.floor(Math.random() * (max - min + 1)) + min; // gets a whole number
+    document.getElementById("math_random").innerHTML = randomNum;
+    return randomNum;
+}
