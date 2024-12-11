@@ -4,8 +4,8 @@ function my_Colors(){
         Sun: "Yeallow",
         Sky: "Blue",
         Clouds: "White",
-        Clouds: "Dark",
         Space: "Black"
     };
+    delete colors.Clouds;           // removes from dictionatry
     document.getElementById("Dictionary").innerHTML = colors.Clouds;
 }
