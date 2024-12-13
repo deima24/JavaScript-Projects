@@ -46,3 +46,14 @@ function MyKeyFunction() {
     document.getElementById("My_keyword").innerHTML = "John read a book that is called " + book1.Book_title + ". Author of this book is " + book1.Book_author +
     ". Books genre is " + book1.Book_genre + ". This book has " + book1.Book_pages + " pages and it was published in " + book1.Book_yearPublished;
 }
+
+function outerFunction() {
+    var outerMessage = "Hello from the outer function ";
+    
+    function innerFunction() {
+        var innerMessage = "And hello from the inner function!";
+        return outerMessage + innerMessage;
+    }
+    document.getElementById("Nested_Function").innerHTML = innerFunction();
+}
+
