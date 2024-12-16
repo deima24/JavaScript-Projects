@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="">
+    <button onclick="countdown()">Click here</button>
+    <p id="timer"></p>
+
+    <div class="slide-container">
+
+        <div class="myImages">
+            <div class="numberImage">1 / 3</div>
+            <img src="images/Ford.jpg">
+        </div>
+
+        <div class="myImages">
+            <div class="numberImage">2 / 3</div>
+            <img src="images/Mini.jpg">
+        </div>
+
+        <div class="myImages">
+            <div class="numberImage">3 / 3</div>
+            <img src="images/VW.jpg">
+        </div>
+
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+    </div>
+    
+
+
+    <script src="JS/main.js"></script>
+    
+</body>
+</html>
