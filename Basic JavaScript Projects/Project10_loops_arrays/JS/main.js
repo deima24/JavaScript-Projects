@@ -43,3 +43,4 @@ function constant_function() {
     myObject.country = "UK";
     document.getElementById("Constant").innerHTML = "Name " + myObject.name + ". Age is " + myObject.age + " Lives in " + myObject.city + " Country is " + myObject.country;
 }
+
