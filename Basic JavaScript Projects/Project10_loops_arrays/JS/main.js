@@ -59,3 +59,19 @@ let movie_info = {
     }
 };
 document.getElementById("movie").innerHTML = movie_info.description();
+
+// break loop
+let text = "";
+for (let i = 0; i < 10; i++) {
+    if (i == 5) {break;}
+    text += "The break loop: " + i + "<br>";
+}
+document.getElementById("break_loop").innerHTML = text;
+
+// continue loop
+let cont_loop = "";
+for (let p = 0; p < 5; p++) {
+    if (p == 3) {continue;}
+    cont_loop += "The Continue loop: " + p +"<br>";
+}
+document.getElementById("continue_loop").innerHTML = cont_loop;
