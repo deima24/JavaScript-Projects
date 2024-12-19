@@ -44,3 +44,18 @@ function constant_function() {
     document.getElementById("Constant").innerHTML = "Name " + myObject.name + ". Age is " + myObject.age + " Lives in " + myObject.city + " Country is " + myObject.country;
 }
 
+function return_Function() {
+    return Math.random();
+}
+document.getElementById("return_result").innerHTML = return_Function();
+
+let movie_info = {
+    name: "Back to the Future",
+    director: "Robert Zemeckis",
+    year: 1985,
+    genre: "Science Fiction/Adventure",
+    description : function () {
+        return "The movie " + this.name + " was directed by " + this.director + " , realesed in " + this.year + " and genre of movie is " + this.genre;
+    }
+};
+document.getElementById("movie").innerHTML = movie_info.description();
