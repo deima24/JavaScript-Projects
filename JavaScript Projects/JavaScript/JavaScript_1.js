@@ -26,3 +26,14 @@ function car_function() {
     }
     document.getElementById("car_output").innerHTML = car_choise;
 }
+
+const myCanvas = document.getElementById("canva");
+const ctx = myCanvas.getContext("2d");
+// Create a Gradient
+const grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "black");
+grd.addColorStop(1, "white");
+
+// Draw a filled Rectangle
+ctx.fillStyle = grd;
+ctx.fillRect(20, 20, 150, 100);
