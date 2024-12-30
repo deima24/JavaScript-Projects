@@ -121,16 +121,21 @@ function checkWinConditions() {
         const c = selectedSquares.includes(squareC);
         // if the 3 variables we pass are all included in our array then
         // true is returned and our else if condition executes the drawLine() function
-        if (a=== true && b === true && c === true) { return true; }
+        if (a === true && b === true && c === true) { return true; }
     }
 }
 
-// this function makes our body element temporarily unclickable
-function disableClick() {
-    // this makes our body unclickable 
-    body.style.pointerEvents = 'none';
-    // this makes our body clickable again after 1 second 
-    setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
+// this function resets the game in the event of a tie or a win
+function resetGame() {
+    // this for loop iterates through each HTML square element
+    for (let i = 0; i < 9; i++) {
+        // this variable gets a HTML element i
+        let square = document.getElementById(String(i));
+        // this removes our elements backgroundImage
+        square.style.backgroundImage = '';
+    }
+    // this resets our array so it is empty and we can start over
+    selectedSquares = [];
 }
 
 // this function takes a string parameter of the path you set earlier for 
@@ -192,8 +197,8 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         // this condition is similar to the one above
         // this is necessary for the 6, 4, 2 win condition
         if (x1 <= x2 && y1 >= y2) {
-            if (x < x2) {x += 10; }
-            if (y > y2) {y -= 10; }
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
@@ -216,15 +221,12 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
 
-// this function resets the game in the event of a tie or a win
-function resetGame() {
-    // this for loop iterates through each HTML square element
-    for (let i = 0; i < 9; i++) {
-        // this variable gets a HTML element i
-        let square = documnet.getElementById(String(i));
-        // this removes our elements backgroundImage
-        square.style.backgroundImage = "";
-    }
-    // this resets our array so it is empty and we can start over
-    selectedSquares = [];
+
+
+// this function makes our body element temporarily unclickable
+function disableClick() {
+    // this makes our body unclickable 
+    body.style.pointerEvents = 'none';
+    // this makes our body clickable again after 1 second 
+    setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
 }
