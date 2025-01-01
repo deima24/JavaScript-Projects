@@ -21,7 +21,7 @@ function Input_Digit(digit) {
     } else {
         // this overwrites Display_Value if the curent value is 0
         // otherwise it adds onto it
-        Calculator.Display_Value = Display_Value === '0' ? digit: Display_Value + digit;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 
@@ -29,7 +29,7 @@ function Input_Digit(digit) {
 function Input_Decimal(dot) {
     // this ensures that accidental clicking of the decimal point doesn't
     // cause bugs in the operation
-    if (Calculator.Wait_Second_Operand === true) return;
+    if (Calculator.Wait_Second_Operand === 'true') return;
     if (!Calculator.Display_Value.includes(dot)) {
         // we are saying that if the Display_Value does not contain a decimal point
         // we want to add a decimal point
@@ -61,9 +61,9 @@ function Handle_Operator(Next_Operator) {
         // here we add a fixed amount of numbers after the decimal
         result = Number(result).toFixed(9);
         // this will remove any trailing 0's
-        result = (result * 1).toString();
-        Calculator.Display_Value = parseFloat(result);
-        Calculator.First_Operand = parseFloat(result);    
+        result = (result * 1).toString();   
+        Calculator.Display_Value = parseFloat(result);      // result/ parseFloat(result)
+        Calculator.First_Operand = parseFloat(result);    // result / parseFloat(result)
     }
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
@@ -103,10 +103,10 @@ keys.addEventListener('click', (event) => {
     if (!target.matches('button')) {
         return;
     }
-    if (target.classList.container('operator')) {
+    if (target.classList.contains('operator')) {
         Handle_Operator(target.value);
         Update_Display();
-        return;
+        return
     }
     if (target.classList.contains('decimal')) {
         Input_Decimal(target.value);
