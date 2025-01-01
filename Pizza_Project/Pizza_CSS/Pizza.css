@@ -1,0 +1,67 @@
+#menuBG {
+    width: 600px;
+    height: 470px;
+    margin: auto;
+}
+
+body {
+    background-color: #FFF8DC;
+}
+
+h1 {
+    font-family: fantasy;
+    color: #4169E1;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #D2B48C;
+}
+
+div {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #F4A460;
+}
+
+#frmMenu {
+    width: 600px;
+    height: 200px;
+    display: flex;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left {
+    width: 170px;
+    height: 200px;
+}
+
+.center {
+    width: 170px;
+    height: 200px;
+}
+
+.right {
+    width: 170px;
+    height: 200px;
+}
+
+#ShowText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top: 0;
+    margin: 0px auto;
+    width: 100px;
+    height: 40px;
+}
