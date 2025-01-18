@@ -41,10 +41,25 @@ input:focus {
 }
 
 li {
+    display: flex;
     text-align: left;
     font-size: 40px;
     list-style: none;
     margin: 0;
+}
+
+.remove {
+    color: red;
+    background-color: #fff;
+    border: none;
+    padding-left: 10px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.remove:hover {
+    font-size: 25px;
 }
 
 footer {
